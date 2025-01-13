@@ -1,7 +1,60 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<sites>
-  <site>
-    <id>default</id>
-    <url>http://updates.jenkins-ci.org/update-center.json</url>
-  </site>
-</sites>
+import Head from 'next/head';
+import Link from 'next/link';
+
+export default function Home() {
+  return (
+    <>
+      <Head>
+        <title>MCSRP Government & Information</title>
+        <meta name="description" content="Your source for important updates and information." />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      </Head>
+      <header>
+        <nav>
+          <ul>
+            <li><Link href="/">Home</Link></li>
+            <li><Link href="/about">About</Link></li>
+            <li><Link href="/services">Services</Link></li>
+            <li><Link href="/contact">Contact</Link></li>
+          </ul>
+        </nav>
+      </header>
+
+      <main>
+        <section className="hero">
+          <h1>Welcome to MCSRP Government & Information Portal</h1>
+          <p>Your source for important updates and information.</p>
+        </section>
+
+        <section className="content">
+          <h2>Latest Updates</h2>
+          <p>This is where you can share recent news or government updates.</p>
+        </section>
+      </main>
+
+      <footer>
+        <p>© 2025 MCSRP Government & Information</p>
+      </footer>
+
+      <style jsx>{`
+        header {
+          background: #f8f9fa;
+          padding: 20px;
+        }
+        nav ul {
+          list-style-type: none;
+          display: flex;
+          gap: 15px;
+        }
+        .hero {
+          background-color: #e9ecef;
+          padding: 50px;
+          text-align: center;
+        }
+        .content {
+          padding: 20px;
+        }
+      `}</style>
+    </>
+  );
+}
